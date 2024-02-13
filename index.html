@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>my love</title>
+    <style>
+        body {
+            background-color: red;
+
+        }
+
+        .painel {
+            margin: auto;
+            background-color: white;
+            width: 380px;
+            height: 600px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #sim {
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -130px;
+        }
+
+        #nao {
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="painel">
+        <h1>Feliz dia dos Namorados</h1>
+        <h5>"A vida é simples, é tomar decisões e não se arrepender"</h5>
+        <img src="https://64.media.tumblr.com/3f887359ff85327607a57da0892cac57/tumblr_nq351qJkeT1uu2kfqo1_250.gif"
+            alt="">
+        <h2>Me aceita como seu piloto?</h5>
+            <a href="princesa.mp4"><button id="sim" onclick="parabens()"> Sim </button></a>
+            <button id="nao" onmouseover="fuja()"> Não </button>
+    </div>
+
+    <script>
+        function fuja() {
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth
+            var alturaJanela = window.innerHeight
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+        function parabens() {
+            alert("Parabéns, você fez uma sábia escolha, não irá se arrepender minha gatinha ❤")
+        }
+    </script>
+
+</body>
+
+</html>
